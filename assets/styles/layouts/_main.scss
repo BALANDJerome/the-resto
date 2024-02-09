@@ -313,10 +313,10 @@ main{
           background: url(../img/event-02.jpg) center/cover;
         }
         .main-left-1,.main-left-2{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
         }
         .main-right{
           height: 80%;
@@ -370,13 +370,43 @@ main{
     }
     .container{
       position: absolute;
-      height: 350px;
+      min-height: 380px;
       width: 1200px;
+      padding: 60px 100px;
       max-width: 80vw;
-      background: white;
+      background: $color3;
       top: 200px;
       left: 50%;
       transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      img{
+        border-radius: 200px;
+        height: 70px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+      p{
+        font-size: 1.3rem;
+        line-height: 40px;
+        i{
+          margin: 6px;
+          font-size: 1rem;
+          transform: translateY(-10px);
+        }
+      }
+      h5{
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        margin-top: 20px;
+      }
+      span{
+        color: $color1;
+        font-size: 1rem;
+      }
     }
 
   }
