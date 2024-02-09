@@ -39,6 +39,17 @@ a,a:visited{
 body{
   font-family: $fonts3;
   text-align: center;
+  &::-webkit-scrollbar{
+    width: 10px;
+    }  
+  &::-webkit-scrollbar-track{
+    background: rgb(221, 221, 221);
+  }
+  &::-webkit-scrollbar-thumb{
+    background-color: $color1;
+    border-radius: 20px;
+    border: 2px solid rgb(221, 221, 221);
+  }
 }
 h1,h2,h6,#btn1,#btn2{
   font-family: $fonts2;
