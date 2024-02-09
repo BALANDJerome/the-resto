@@ -17,9 +17,10 @@ $fonts3: Roboto, Arial;
 
 $black1: rgb(10,10,10);
 $white1: rgb(250, 250, 250);
-$color1: rgb(161, 113, 41);
-$color2: rgb(37, 35, 30);
-$grey1: rgb(128,128,128);
+$color1: rgb(153, 113, 53);
+$color2: rgb(34, 33, 30);
+$color3: rgb(240, 240, 240);
+$grey1: rgb(177, 177, 177);
 
 *{
   margin: 0;
@@ -55,8 +56,12 @@ h1,h2,h6,#btn1,#btn2{
   font-family: $fonts2;
   text-transform: uppercase;
 }
+h2{
+  letter-spacing: 2px;
+}
 h3{
   font-family: $fonts1;
   color: $color1;
   font-size: 2rem;
+  font-weight: 100;
 }

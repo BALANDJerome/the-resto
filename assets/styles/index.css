@@ -41,7 +41,7 @@ body::-webkit-scrollbar-track {
   background: rgb(221, 221, 221);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(161, 113, 41);
+  background-color: rgb(153, 113, 53);
   border-radius: 20px;
   border: 2px solid rgb(221, 221, 221);
 }
@@ -51,10 +51,15 @@ h1, h2, h6, #btn1, #btn2 {
   text-transform: uppercase;
 }
 
+h2 {
+  letter-spacing: 2px;
+}
+
 h3 {
   font-family: Allura, Arial;
-  color: rgb(161, 113, 41);
+  color: rgb(153, 113, 53);
   font-size: 2rem;
+  font-weight: 100;
 }
 
 header {
@@ -146,7 +151,7 @@ header nav .nav-menu ul li:before {
   bottom: -10px;
 }
 header nav .nav-menu ul li:hover {
-  color: rgb(161, 113, 41);
+  color: rgb(153, 113, 53);
   font-weight: bold;
 }
 header nav .nav-menu ul li:hover::after, header nav .nav-menu ul li:hover:before {
@@ -166,7 +171,7 @@ header nav .nav-social ul li:hover a {
   display: block;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
-  color: rgb(161, 113, 41);
+  color: rgb(153, 113, 53);
 }
 header .header-title {
   -webkit-transform: translateY(-40px);
@@ -190,4 +195,481 @@ header .header-title p {
   text-transform: uppercase;
   font-size: 0.9rem;
   letter-spacing: 8px;
+}
+
+main .section-1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: rgb(240, 240, 240);
+}
+main .section-1 .section-1-left {
+  border: 2px dotted rgb(231, 189, 95);
+  margin: 15px;
+  padding: 40px 20px;
+}
+main .section-1 .section-1-left h3 {
+  font-size: 2.8rem;
+  line-height: 35px;
+  color: rgb(231, 189, 95);
+}
+main .section-1 .section-1-left h2 {
+  font-size: 1.7rem;
+  line-height: 25px;
+}
+main .section-1 .section-1-left #sli1 {
+  margin: 40px auto;
+  width: 40px;
+}
+main .section-1 .section-1-left #sli2 {
+  border-radius: 200px;
+  width: 100px;
+  margin: 35px auto 15px;
+}
+main .section-1 .section-1-left h5 {
+  font-size: 1.5rem;
+}
+main .section-1 .section-1-left p:last-child {
+  color: rgb(177, 177, 177);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+main .section-1 .section-1-right {
+  width: 100%;
+  height: 100%;
+  background: url(../img/store-01.jpg) center/cover;
+}
+main .section-2 {
+  background: rgb(34, 33, 30);
+  background-image: url(../img/bg-menu-01.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .section-2 .section-2-container {
+  width: 80vw;
+  max-width: 950px;
+  margin: 80px auto 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .section-2 .section-2-container .section-2-top img {
+  margin-top: 40px;
+}
+main .section-2 .section-2-container .section-2-top .section-2-top-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: rgb(250, 250, 250);
+  height: 100px;
+}
+main .section-2 .section-2-container .section-2-top .section-2-top-nav ul li {
+  position: relative;
+  font-size: 1.1rem;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+main .section-2 .section-2-container .section-2-top .section-2-top-nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: rgb(250, 250, 250);
+  bottom: -10px;
+  left: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+main .section-2 .section-2-container .section-2-top .section-2-top-nav ul li:hover {
+  color: rgb(153, 113, 53);
+}
+main .section-2 .section-2-container .section-2-top .section-2-top-nav ul li:hover::after {
+  background: rgb(153, 113, 53);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+main .section-2 .section-2-container .section-2-bottom {
+  background: rgb(240, 240, 240);
+  border-top: 5px solid rgb(153, 113, 53);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+}
+main .section-2 .section-2-container .section-2-bottom .section-2-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px dotted rgb(177, 177, 177);
+  padding: 40px 0;
+}
+main .section-2 .section-2-container .section-2-bottom .section-2-menu img {
+  border-radius: 200px;
+  margin-right: 10px;
+}
+main .section-2 .section-2-container .section-2-bottom .section-2-menu .section-2-menu-text {
+  width: 100%;
+  text-align: left;
+}
+main .section-2 .section-2-container .section-2-bottom .section-2-menu .section-2-menu-text h4 {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+main .section-2 .section-2-container .section-2-bottom .section-2-menu .section-2-menu-text p {
+  font-size: 1.2rem;
+  line-height: 35px;
+}
+main .section-2 .section-2-container .section-2-bottom .section-2-menu > p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: rgb(153, 113, 53);
+  margin: auto 15px;
+}
+main .section-3 {
+  background: rgb(34, 33, 30);
+  padding: 80px 0 0;
+}
+main .section-3 .section-3-container {
+  max-width: 1280px;
+  width: 80vw;
+  background: rgb(240, 240, 240);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+main .section-3 .section-3-container .section-3-left-container {
+  background: rgb(10, 10, 10);
+  color: rgb(250, 250, 250);
+  padding: 30px;
+}
+main .section-3 .section-3-container .section-3-left-container .section-3-left {
+  border: 1px dotted rgb(240, 240, 240);
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 500px;
+}
+main .section-3 .section-3-container .section-3-left-container .section-3-left h3 {
+  line-height: 30px;
+  font-size: 2.5rem;
+}
+main .section-3 .section-3-container .section-3-left-container .section-3-left h2 {
+  line-height: 30px;
+}
+main .section-3 .section-3-container .section-3-left-container .section-3-left img {
+  width: 30px;
+}
+main .section-3 .section-3-container .section-3-left-container .section-3-left h6 {
+  font-size: 1.3rem;
+  color: rgb(153, 113, 53);
+}
+main .section-3 .section-3-container .section-3-left-container .section-3-left p {
+  margin-bottom: 30px;
+}
+main .section-3 .section-3-container .section-3-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .section-3 .section-3-container .section-3-right .section-3-top h3 {
+  font-size: 2.5rem;
+  line-height: 30px;
+  color: rgb(231, 189, 95);
+}
+main .section-3 .section-3-container .section-3-right .section-3-top h2 {
+  font-size: 2rem;
+  line-height: 30px;
+}
+main .section-3 .section-3-container .section-3-right .section-3-top img {
+  margin: 30px auto;
+}
+main .section-3 .section-3-container .section-3-right .section-3-form {
+  width: 75%;
+}
+main .section-3 .section-3-container .section-3-right .section-3-form form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 45px);
+  gap: 20px;
+}
+main .section-3 .section-3-container .section-3-right .section-3-form form input, main .section-3 .section-3-container .section-3-right .section-3-form form select {
+  background: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgb(177, 177, 177);
+}
+main .section-3 .section-3-container .section-3-right .section-3-form form input::-webkit-input-placeholder, main .section-3 .section-3-container .section-3-right .section-3-form form select::-webkit-input-placeholder {
+  color: rgb(177, 177, 177);
+}
+main .section-3 .section-3-container .section-3-right .section-3-form form input::-moz-placeholder, main .section-3 .section-3-container .section-3-right .section-3-form form select::-moz-placeholder {
+  color: rgb(177, 177, 177);
+}
+main .section-3 .section-3-container .section-3-right .section-3-form form input:-ms-input-placeholder, main .section-3 .section-3-container .section-3-right .section-3-form form select:-ms-input-placeholder {
+  color: rgb(177, 177, 177);
+}
+main .section-3 .section-3-container .section-3-right .section-3-form form input::-ms-input-placeholder, main .section-3 .section-3-container .section-3-right .section-3-form form select::-ms-input-placeholder {
+  color: rgb(177, 177, 177);
+}
+main .section-3 .section-3-container .section-3-right .section-3-form form input::placeholder, main .section-3 .section-3-container .section-3-right .section-3-form form select::placeholder {
+  color: rgb(177, 177, 177);
+}
+main .section-3 .section-3-container .section-3-right .section-3-form form input:last-child, main .section-3 .section-3-container .section-3-right .section-3-form form select:last-child {
+  background: rgb(10, 10, 10);
+  border-radius: 200px;
+  color: rgb(250, 250, 250);
+  height: 45px;
+  margin: 20px 0;
+  grid-column: 2;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+}
+main .section-4 {
+  background: rgb(34, 33, 30);
+  padding: 100px 0 0;
+}
+main .section-4 .section-4-top h2 {
+  color: rgb(250, 250, 250);
+  font-size: 1.6rem;
+  line-height: 25px;
+}
+main .section-4 .section-4-top img {
+  margin: 40px auto;
+}
+main .section-4 .section-4-bottom {
+  background: rgb(34, 33, 30);
+  max-width: 1190px;
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: repeat(2, 220px);
+  gap: 20px;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+main .section-4 .section-4-bottom .main-date {
+  background: rgb(34, 33, 30);
+  color: rgb(250, 250, 250);
+  height: 100px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+}
+main .section-4 .section-4-bottom .main-date p {
+  font-size: 2rem;
+  font-weight: 800;
+}
+main .section-4 .section-4-bottom .main-date span {
+  font-size: 1rem;
+}
+main .section-4 .section-4-bottom h6 {
+  font-size: 1.7rem;
+  letter-spacing: 1.5px;
+  text-transform: none;
+  font-weight: 100;
+  font-family: Roboto, Arial;
+}
+main .section-4 .section-4-bottom .main-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 0;
+  color: rgb(177, 177, 177);
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+}
+main .section-4 .section-4-bottom .main-text i {
+  margin-right: 5px;
+}
+main .section-4 .section-4-bottom .main-text p {
+  margin-right: 10px;
+}
+main .section-4 .section-4-bottom button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+}
+main .section-4 .section-4-bottom button:hover {
+  color: rgb(153, 113, 53);
+}
+main .section-4 .section-4-bottom button:hover::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: rgb(153, 113, 53);
+  bottom: 0;
+  left: 0;
+}
+main .section-4 .section-4-bottom .section-4-left {
+  background: rgb(240, 240, 240);
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+main .section-4 .section-4-bottom .section-4-left .main-left-1 {
+  background: url(../img/event-01.jpg) center/cover;
+}
+main .section-4 .section-4-bottom .section-4-left .main-left-2 {
+  background: url(../img/event-02.jpg) center/cover;
+}
+main .section-4 .section-4-bottom .section-4-left .main-left-1, main .section-4 .section-4-bottom .section-4-left .main-left-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+main .section-4 .section-4-bottom .section-4-left .main-right {
+  height: 80%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+main .section-4 .section-4-bottom .section-4-left .main-right h6 {
+  margin-left: 10px;
+}
+main .section-4 .section-4-bottom .section-4-right-bg {
+  background: url(../img/event-03.jpg) center/cover;
+  grid-column: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+main .section-4 .section-4-bottom .section-4-right-bg .right-main {
+  background: rgb(240, 240, 240);
+  margin: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .section-4 .section-4-bottom .section-4-right-bg .right-main .main-date {
+  height: 130px;
+}
+main .section-4 .section-4-bottom .section-4-right-bg .right-main .container {
+  height: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+main .section-5 {
+  background: rgb(34, 33, 30);
+  position: relative;
+  height: 880px;
+}
+main .section-5 .map-bg {
+  background: url(../img/gmap.jpg) center;
+  width: 100%;
+  height: 440px;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+main .section-5 .container {
+  position: absolute;
+  height: 350px;
+  width: 1200px;
+  max-width: 80vw;
+  background: white;
+  top: 200px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+footer {
+  background: url(../img/bg-footer.jpg) center/cover;
 }/*# sourceMappingURL=index.css.map */

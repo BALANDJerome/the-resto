@@ -46,16 +46,15 @@
       <div class="section-1-left">
         <h3>Discover</h3>
         <h2>Our store</h2>
-        <img src="./assets/img/ic-plate.png" alt="couverts2">
+        <img id="sli1" src="./assets/img/ic-plate.png" alt="couverts2">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum repudiandae quos praesentium necessitatibus
           vel similique aspernatur quasi. Veritatis, sunt doloremque. Officia iusto mollitia est quaerat perspiciatis
           aspernatur tenetur animi earum laudantium, cum repudiandae explicabo impedit.</p>
-        <img src="./assets/img/avatar-01.jpg" alt="avatar1">
+        <img id="sli2" src="./assets/img/avatar-01.jpg" alt="avatar1">
         <h5>Russel Stephens</h5>
         <p>Chef cook</p>
       </div>
       <div class="section-1-right">
-        <img src="./assets/img/store-01.jpg" alt="plat cuisiné">
       </div>
     </section>
     <section class="section-2">
@@ -142,32 +141,52 @@
       </div>
     </section>
     <section class="section-3">
-      <div class="section-3-left">
-        <h3>Time</h3>
-        <h2>Open</h2>
-        <img src="./assets/img/ic-plate.png" alt="couverts2">
-        <h6>Monday - Friday</h6>
-        <p>7AM - 11AM (Breakfast) <br>11AM - 10PM (Lunch/Dinner)</p>
-        <h6>Saturday / Sunday</h6>
-        <p>8AM - 1PM (Brunch) <br>1PM - 9PM (Lunch/Dinner)</p>
-        <h6>+15 890 979 25 52</h6>
-      </div>
-      <div class="section-3-right">
-        <div class="section-3-top">
-          <h3>Reservations</h3>
-          <h2>Online booking</h2>
-          <img src="./assets/img/ic-plate.png" alt="couverts2">
+      <div class="section-3-container">
+        <div class="section-3-left-container">
+          <div class="section-3-left">
+            <div>
+              <h3>Time</h3>
+              <h2>Open</h2>
+            </div>
+            <img src="./assets/img/ic-plate.png" alt="couverts2">
+            <h6>Monday - Friday</h6>
+            <p>7AM - 11AM (Breakfast) <br>11AM - 10PM (Lunch/Dinner)</p>
+            <h6>Saturday / Sunday</h6>
+            <p>8AM - 1PM (Brunch) <br>1PM - 9PM (Lunch/Dinner)</p>
+            <h6>+15 890 979 25 52</h6>
+          </div>
         </div>
-        <div class="section-3-form">
-          <form action="#">
-            <input type="number" name="people" min="1" max="100" placeholder="People" required>
-            <input type="date" name="date" required>
-            <input type="time" name="time" value="07:00" required min="07:00" max="22:00" step="600">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="tel" name="tel" placeholder="Phone" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="submit" id="btn1" value="Book now">
-          </form>
+        <div class="section-3-right">
+          <div class="section-3-top">
+            <h3>Reservations</h3>
+            <h2>Online booking</h2>
+            <img src="./assets/img/ic-plate.png" alt="couverts2">
+          </div>
+          <div class="section-3-form">
+            <form action="#">
+              <select name="people" id="people">
+                <option value="People" disabled selected>People</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <input type="date" name="date" required>
+              <input type="time" name="time" value="07:00" required min="07:00" max="22:00" step="600">
+              <input type="text" name="name" placeholder="Name" required>
+              <input type="tel" name="tel" placeholder="Phone" required>
+              <input type="email" name="email" placeholder="Email" required>
+              <input type="submit" id="btn1" value="Book now">
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="section-4">
       <div class="section-4-top">
@@ -177,12 +196,10 @@
       </div>
       <div class="section-4-bottom">
         <div class="section-4-left">
-          <div class="section-4-left-main">
-            <div class="main-bg-1">
-              <div class="main-date">
-                <p>08</p>
-                <span>July</span>
-              </div>
+          <div class="main-left-1">
+            <div class="main-date">
+              <p>08</p>
+              <span>July</span>
             </div>
           </div>
           <div class="main-right">
@@ -197,12 +214,10 @@
           </div>
         </div>
         <div class="section-4-left">
-          <div class="section-4-left-main">
-            <div class="main-bg-2">
-              <div class="main-date">
-                <p>08</p>
-                <span>July</span>
-              </div>
+          <div class="main-left-2">
+            <div class="main-date">
+              <p>08</p>
+              <span>July</span>
             </div>
           </div>
           <div class="main-right">
@@ -217,12 +232,12 @@
           </div>
         </div>
         <div class="section-4-right-bg">
-          <div class="section-4-right-main">
+          <div class="right-main">
             <div class="main-date">
               <p>08</p>
               <span>July</span>
             </div>
-            <div>
+            <div class="container">
               <h6>Thousands celebrities at Johnnie Night</h6>
               <div class="main-text">
                 <i class="fa-solid fa-location-dot"></i>
@@ -237,7 +252,9 @@
       </div>
     </section>
     <section class="section-5">
-      <div class="section-5-container">
+      <div class="map-bg">
+      </div>
+      <div class="container">
         <img src="./assets/img/avatar-02.jpg" alt="avatar2">
         <p><i class="fa-solid fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
           optio quae sequi. In quae veritatis dolor
