@@ -15,6 +15,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 700px){
+      justify-content: space-around;
+    }
     h3{
       color: $white1;
       font-size: 3rem;
@@ -23,6 +26,9 @@ header{
     }
     .nav-menu{
       width: 100%;
+      @media screen and (max-width: 700px) {
+        display: none;
+      }
       ul{
         display: flex;
         justify-content: space-evenly;
@@ -31,6 +37,7 @@ header{
         margin-left: 5%;
         li{
           cursor: pointer;
+          margin: 0 5px;
           transition: 0.2s;
           position: relative;
           @keyframes navbar {
@@ -79,16 +86,42 @@ header{
     }
   }
   .header-title{
-    transform: translateY(-40px);
+    transform: translateY(-200px) scale(1);
+    opacity: 0;    
+    animation: titlehead 6s forwards ease-in-out;
+    @media screen and (max-width: 1100px){
+      animation: none;
+      transform: translateY(-60px) scale(1);
+      opacity: 1;
+    }
+    @keyframes titlehead {
+      60%{
+        transform: translateY(-40px) scale(1.5);
+        opacity: 1;
+      }
+      100%{
+        transform: translateY(-40px) scale(1);
+        opacity: 1;
+      }      
+    }
     h3{
       font-size: 3.5rem;
       font-weight: 100;
       line-height: 50px;
+      @media screen and (max-width: 700px){
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
     }
     h1{
       font-size: 4rem;
       letter-spacing: 10px;
       line-height: 50px;
+      @media screen and (max-width: 700px){
+        font-size: 3.1rem;
+        line-height: normal;
+        margin: 0 20px;
+      }
     }
     img{
       margin: 65px auto 40px;
@@ -98,6 +131,7 @@ header{
       text-transform: uppercase;
       font-size: 0.9rem;
       letter-spacing: 8px;
+      margin: 0 50px;
     }
   }
 }

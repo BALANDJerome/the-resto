@@ -93,6 +93,12 @@ header nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (max-width: 700px) {
+  header nav {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
 header nav h3 {
   color: rgb(250, 250, 250);
   font-size: 3rem;
@@ -104,6 +110,11 @@ header nav h3 {
 }
 header nav .nav-menu {
   width: 100%;
+}
+@media screen and (max-width: 700px) {
+  header nav .nav-menu {
+    display: none;
+  }
 }
 header nav .nav-menu ul {
   display: -webkit-box;
@@ -118,6 +129,7 @@ header nav .nav-menu ul {
 }
 header nav .nav-menu ul li {
   cursor: pointer;
+  margin: 0 5px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   position: relative;
@@ -174,18 +186,67 @@ header nav .nav-social ul li:hover a {
   color: rgb(153, 113, 53);
 }
 header .header-title {
-  -webkit-transform: translateY(-40px);
-          transform: translateY(-40px);
+  -webkit-transform: translateY(-200px) scale(1);
+          transform: translateY(-200px) scale(1);
+  opacity: 0;
+  -webkit-animation: titlehead 6s forwards ease-in-out;
+          animation: titlehead 6s forwards ease-in-out;
+}
+@media screen and (max-width: 1100px) {
+  header .header-title {
+    -webkit-animation: none;
+            animation: none;
+    -webkit-transform: translateY(-60px) scale(1);
+            transform: translateY(-60px) scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes titlehead {
+  60% {
+    -webkit-transform: translateY(-40px) scale(1.5);
+            transform: translateY(-40px) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-40px) scale(1);
+            transform: translateY(-40px) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes titlehead {
+  60% {
+    -webkit-transform: translateY(-40px) scale(1.5);
+            transform: translateY(-40px) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-40px) scale(1);
+            transform: translateY(-40px) scale(1);
+    opacity: 1;
+  }
 }
 header .header-title h3 {
   font-size: 3.5rem;
   font-weight: 100;
   line-height: 50px;
 }
+@media screen and (max-width: 700px) {
+  header .header-title h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+}
 header .header-title h1 {
   font-size: 4rem;
   letter-spacing: 10px;
   line-height: 50px;
+}
+@media screen and (max-width: 700px) {
+  header .header-title h1 {
+    font-size: 3.1rem;
+    line-height: normal;
+    margin: 0 20px;
+  }
 }
 header .header-title img {
   margin: 65px auto 40px;
@@ -195,12 +256,19 @@ header .header-title p {
   text-transform: uppercase;
   font-size: 0.9rem;
   letter-spacing: 8px;
+  margin: 0 50px;
 }
 
 main .section-1 {
   display: grid;
   grid-template-columns: 50% 50%;
   background: rgb(240, 240, 240);
+}
+@media screen and (max-width: 700px) {
+  main .section-1 {
+    grid-template-columns: 1fr;
+    overflow: hidden;
+  }
 }
 main .section-1 .section-1-left {
   border: 2px dotted rgb(231, 189, 95);
@@ -277,9 +345,15 @@ main .section-2 .section-2-container .section-2-top .section-2-top-nav ul {
 main .section-2 .section-2-container .section-2-top .section-2-top-nav ul li {
   position: relative;
   font-size: 1.1rem;
+  margin: 0 5px;
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+@media screen and (max-width: 550px) {
+  main .section-2 .section-2-container .section-2-top .section-2-top-nav ul li {
+    font-size: 0.8rem;
+  }
 }
 main .section-2 .section-2-container .section-2-top .section-2-top-nav ul li::after {
   content: "";
@@ -310,6 +384,11 @@ main .section-2 .section-2-container .section-2-bottom {
      -moz-column-gap: 40px;
           column-gap: 40px;
 }
+@media screen and (max-width: 900px) {
+  main .section-2 .section-2-container .section-2-bottom {
+    grid-template-columns: 1fr;
+  }
+}
 main .section-2 .section-2-container .section-2-bottom .section-2-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -328,6 +407,11 @@ main .section-2 .section-2-container .section-2-bottom .section-2-menu img {
   border-radius: 200px;
   margin-right: 10px;
 }
+@media screen and (max-width: 400px) {
+  main .section-2 .section-2-container .section-2-bottom .section-2-menu img {
+    width: 70px;
+  }
+}
 main .section-2 .section-2-container .section-2-bottom .section-2-menu .section-2-menu-text {
   width: 100%;
   text-align: left;
@@ -336,9 +420,19 @@ main .section-2 .section-2-container .section-2-bottom .section-2-menu .section-
   text-transform: uppercase;
   font-size: 1rem;
 }
+@media screen and (max-width: 550px) {
+  main .section-2 .section-2-container .section-2-bottom .section-2-menu .section-2-menu-text h4 {
+    font-size: 0.8rem;
+  }
+}
 main .section-2 .section-2-container .section-2-bottom .section-2-menu .section-2-menu-text p {
   font-size: 1.2rem;
   line-height: 35px;
+}
+@media screen and (max-width: 550px) {
+  main .section-2 .section-2-container .section-2-bottom .section-2-menu .section-2-menu-text p {
+    font-size: 0.8rem;
+  }
 }
 main .section-2 .section-2-container .section-2-bottom .section-2-menu > p {
   font-size: 1.3rem;
@@ -346,17 +440,33 @@ main .section-2 .section-2-container .section-2-bottom .section-2-menu > p {
   color: rgb(153, 113, 53);
   margin: auto 15px;
 }
+@media screen and (max-width: 400px) {
+  main .section-2 .section-2-container .section-2-bottom .section-2-menu > p {
+    font-size: 1rem;
+  }
+}
 main .section-3 {
   background: rgb(34, 33, 30);
   padding: 80px 0 0;
 }
 main .section-3 .section-3-container {
   max-width: 1280px;
-  width: 80vw;
+  width: 90vw;
   background: rgb(240, 240, 240);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 30% 70%;
+}
+@media screen and (max-width: 950px) {
+  main .section-3 .section-3-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 main .section-3 .section-3-container .section-3-left-container {
   background: rgb(10, 10, 10);
@@ -395,8 +505,18 @@ main .section-3 .section-3-container .section-3-left-container .section-3-left h
   font-size: 1.3rem;
   color: rgb(153, 113, 53);
 }
+@media screen and (max-width: 500px) {
+  main .section-3 .section-3-container .section-3-left-container .section-3-left h6 {
+    font-size: 1rem;
+  }
+}
 main .section-3 .section-3-container .section-3-left-container .section-3-left p {
   margin-bottom: 30px;
+}
+@media screen and (max-width: 500px) {
+  main .section-3 .section-3-container .section-3-left-container .section-3-left p {
+    font-size: 0.8rem;
+  }
 }
 main .section-3 .section-3-container .section-3-right {
   display: -webkit-box;
@@ -412,6 +532,7 @@ main .section-3 .section-3-container .section-3-right {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 40px;
 }
 main .section-3 .section-3-container .section-3-right .section-3-top h3 {
   font-size: 2.5rem;
@@ -434,9 +555,21 @@ main .section-3 .section-3-container .section-3-right .section-3-form form {
   grid-template-rows: repeat(3, 45px);
   gap: 20px;
 }
+@media screen and (max-width: 800px) {
+  main .section-3 .section-3-container .section-3-right .section-3-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 main .section-3 .section-3-container .section-3-right .section-3-form form input, main .section-3 .section-3-container .section-3-right .section-3-form form select {
   background: none;
   width: 100%;
+  height: 45px;
   border: none;
   border-bottom: 1px solid rgb(177, 177, 177);
 }
@@ -460,14 +593,33 @@ main .section-3 .section-3-container .section-3-right .section-3-form form input
   border-radius: 200px;
   color: rgb(250, 250, 250);
   height: 45px;
-  margin: 20px 0;
-  grid-column: 2;
+  width: 160px;
+  margin: 20px auto;
+  grid-column: 1/4;
   font-size: 0.9rem;
   letter-spacing: 3px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+main .section-3 .section-3-container .section-3-right .section-3-form form input:last-child:hover, main .section-3 .section-3-container .section-3-right .section-3-form form select:last-child:hover {
+  color: rgb(10, 10, 10);
+  background: rgb(240, 240, 240);
+  border-bottom: 3px solid rgb(177, 177, 177);
+  border-top: 1px solid rgb(177, 177, 177);
+}
+main .section-3 .section-3-container .section-3-right .section-3-form form input:last-child:active, main .section-3 .section-3-container .section-3-right .section-3-form form select:last-child:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 main .section-4 {
   background: rgb(34, 33, 30);
   padding: 100px 0 0;
+}
+@media screen and (max-width: 980px) {
+  main .section-4 {
+    display: none;
+  }
 }
 main .section-4 .section-4-top h2 {
   color: rgb(250, 250, 250);
@@ -649,26 +801,24 @@ main .section-4 .section-4-bottom .section-4-right-bg .right-main .container {
 main .section-5 {
   background: rgb(34, 33, 30);
   position: relative;
-  height: 880px;
+  min-height: 850px;
+  padding: 180px 0 280px;
 }
 main .section-5 .map-bg {
-  background: url(../img/gmap.jpg) center;
+  background: url(../img/gmap.jpg) center/cover;
   width: 100%;
   height: 440px;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  position: absolute;
+  bottom: 0;
 }
 main .section-5 .container {
-  position: absolute;
+  position: relative;
   min-height: 380px;
   width: 1200px;
+  margin: 0 auto;
   padding: 60px 100px;
-  max-width: 80vw;
+  max-width: 85vw;
   background: rgb(240, 240, 240);
-  top: 200px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,6 +842,11 @@ main .section-5 .container p {
   font-size: 1.3rem;
   line-height: 40px;
 }
+@media screen and (max-width: 600px) {
+  main .section-5 .container p {
+    font-size: 1.1rem;
+  }
+}
 main .section-5 .container p i {
   margin: 6px;
   font-size: 1rem;
@@ -699,9 +854,11 @@ main .section-5 .container p i {
           transform: translateY(-10px);
 }
 main .section-5 .container h5 {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  font-weight: 500;
   letter-spacing: 1px;
   margin-top: 20px;
+  margin-bottom: 15px;
 }
 main .section-5 .container span {
   color: rgb(153, 113, 53);
@@ -713,11 +870,24 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 990px) {
+  footer {
+    background: rgb(34, 33, 30);
+  }
 }
 footer .footer-left {
-  width: 50%;
+  width: 700px;
   text-align: left;
-  padding: 80px 40px 80px 300px;
+  padding: 80px 40px;
+}
+@media screen and (max-width: 990px) {
+  footer .footer-left {
+    display: none;
+  }
 }
 footer .footer-left h3 {
   font-size: 3rem;
@@ -728,7 +898,7 @@ footer .footer-left p {
   line-height: 35px;
 }
 footer .footer-right {
-  width: 50%;
+  max-width: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -743,7 +913,13 @@ footer .footer-right {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: rgb(250, 250, 250);
-  padding: 80px 40px;
+  padding: 80px 45px;
+}
+@media screen and (max-width: 990px) {
+  footer .footer-right {
+    padding: 40px;
+    height: 230px;
+  }
 }
 footer .footer-right h6 {
   text-align: left;
@@ -757,6 +933,12 @@ footer .footer-right input {
   width: 300px;
   margin: 15px 5px;
   color: rgb(250, 250, 250);
+}
+@media screen and (max-width: 990px) {
+  footer .footer-right input {
+    width: 150px;
+    margin: 10px 0;
+  }
 }
 footer .footer-right .footer-right-social {
   display: -webkit-box;
@@ -774,6 +956,11 @@ footer .footer-right .footer-right-social ul {
 }
 footer .footer-right .footer-right-social ul li {
   margin: 0 30px;
+}
+@media screen and (max-width: 990px) {
+  footer .footer-right .footer-right-social ul li {
+    margin: 0 15px;
+  }
 }
 footer .footer-right .footer-right-social ul li:hover {
   -webkit-transform: scale(1.3);
